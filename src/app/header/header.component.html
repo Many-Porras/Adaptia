@@ -1,0 +1,48 @@
+<nav>
+  <div class="example-container" [class.example-is-mobile]="mobileQuery.matches" *ngIf="shouldRun">
+      <mat-toolbar color="primary" class="example-toolbar">
+        <button mat-icon-button (click)="snav.toggle()"><mat-icon color="danger">notes</mat-icon></button>
+        <h1 class="example-app-name">Responsive App</h1>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-4" style="display: flex">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" style="float: right" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user"></i> Profile </a>
+              <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+                <a class="dropdown-item" href="#">My account</a>
+                <a class="dropdown-item" href="#">Log out</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </mat-toolbar>
+    
+      <mat-sidenav-container class="example-sidenav-container"
+                            [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                    [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+          <mat-nav-list>
+            <a mat-list-item [routerLink]="nav.route" *ngFor="let nav of fillerNav">
+              <mat-icon class="icono">{{nav.icon}}</mat-icon>
+              {{nav.name}}</a>
+          </mat-nav-list>
+        </mat-sidenav>
+    
+        <mat-sidenav-content>
+          <router-outlet></router-outlet>
+          <app-home></app-home>
+          <app-we-are></app-we-are>
+          <app-services></app-services>
+          <app-projects></app-projects>
+          <app-clients></app-clients> 
+          <app-footer></app-footer>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+    </div>
+    
+    <div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>
+</nav>
+  
+
+  
