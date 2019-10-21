@@ -30,8 +30,20 @@ h1.example-app-name {
   flex: 1 0 auto;
 }
 mat-sidenav{
-  width: 15%;
+  height: 100%;
+  width:20%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background: rgba(76, 175, 80, 0.3) ;
+  padding-top: 60px;
+
 }
 .icono{
   margin-right: 10px;
+}
+
+mat-toolbar{
+  background: linear-gradient(90deg, rgb(33, 57, 87), rgb(40, 218, 187));
+  color:white;
 }

@@ -1,6 +1,6 @@
 .weare-section{
 	padding-top: 10rem;
-	background-image: url('src/assets/img/Anotacion3.png');
+	background-color: white;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -27,3 +27,4 @@
   .mat-chip{
 	font-size: 30px;
   }
+

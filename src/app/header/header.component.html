@@ -1,6 +1,6 @@
 <nav>
-  <div class="example-container" [class.example-is-mobile]="mobileQuery.matches" *ngIf="shouldRun">
-      <mat-toolbar color="primary" class="example-toolbar">
+  <div class="example-container" [class.example-is-mobile]="mobileQuery.matches" *ngIf="shouldRun" >
+      <mat-toolbar class="example-toolbar">
         <button mat-icon-button (click)="snav.toggle()"><mat-icon color="danger">notes</mat-icon></button>
         <h1 class="example-app-name">Responsive App</h1>
         <div class="collapse navbar-collapse" id="navbarSupportedContent-4" style="display: flex">
@@ -10,8 +10,9 @@
                 aria-haspopup="true" aria-expanded="false">
                 <i class="fa fa-user"></i> Profile </a>
               <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-                <a class="dropdown-item" href="#">My Account</a>
-                <a class="dropdown-item" href="#">Log Out</a>
+                <a class="dropdown-item" routerLink="user/login" href="#">My account</a>
+                <a class="dropdown-item" routerLink="user/profile" href="#">Profile</a>
+                <a class="dropdown-item" routerLink="user/register" href="#">Registration</a>
               </div>
             </li>
           </ul>
@@ -41,7 +42,7 @@
       </mat-sidenav-container>
     </div>
     
-    <div *ngIf="!shouldRun">Please open on Stackblitz to see result 2</div>
+    <div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>
 </nav>
   
 
