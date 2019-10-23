@@ -44,6 +44,11 @@ mat-sidenav{
 }
 
 mat-toolbar{
-  background: linear-gradient(90deg, rgb(33, 57, 87), rgb(40, 218, 187));
+  background: linear-gradient(90deg, rgb(28, 50, 71), rgb(40, 218, 187));
   color:white;
+}
+
+mat-chip-list{
+  position: relative;
+  float: right;
 }

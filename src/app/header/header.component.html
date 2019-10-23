@@ -4,6 +4,20 @@
         <button mat-icon-button (click)="snav.toggle()"><mat-icon color="danger">notes</mat-icon></button>
         <h1 class="example-app-name">Responsive App</h1>
         <div class="collapse navbar-collapse" id="navbarSupportedContent-4" style="display: flex">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown">
+                <a  style="float: right">
+                  <mat-chip-list aria-label="Fish selection">
+                      <mat-chip><mat-icon aria-hidden="false" aria-label="Example home icon">person</mat-icon>Login</mat-chip>
+                      <mat-chip><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>Sign up</mat-chip>
+                  </mat-chip-list> </a>
+  
+              </li>
+            </ul>
+          </div>
+
+          <!-- 
+           <div class="collapse navbar-collapse" id="navbarSupportedContent-4" style="display: flex">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" style="float: right" data-toggle="dropdown"
@@ -16,7 +30,9 @@
               </div>
             </li>
           </ul>
-        </div>
+        </div> 
+          -->
+        
       </mat-toolbar>
     
       <mat-sidenav-container class="example-sidenav-container"
